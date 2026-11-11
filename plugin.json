@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cellium-wallet",
+  "version": "0.1.0",
+  "description": "Connect Hermes to a Cellium agent for wallet operations, swaps, bridges, and managed orders.",
+  "author": {
+    "name": "Cellium",
+    "url": "https://cellium.xyz"
+  },
+  "homepage": "https://cellium.xyz",
+  "repository": "https://github.com/xjubiliance/cellium-hermes-plugin",
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "servers": {
+        "cellium_wallet": {
+          "trust": "untrusted"
+        }
+      },
+      "config_schema": {
+        "agent_credential": {
+          "type": "secret",
+          "env": "CELLIUM_MCP_TOKEN",
+          "description": "Manual MCP credential for the Cellium agent you want to connect."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "cellium_wallet": {
+      "type": "streamable-http",
+      "url": "https://app.cellium.xyz/mcp",
+      "headers": {
+        "Authorization": "Bearer ${CELLIUM_MCP_TOKEN}"
+      }
+    }
+  }
+}
